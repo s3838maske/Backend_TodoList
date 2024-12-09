@@ -16,7 +16,7 @@ const addUser = (req, res) => {
     res
       .status(200)
       .json({ message: "User created successfully", userID: result.insertId });
-  });
+  });   
 };
 
 // Delete user logic
