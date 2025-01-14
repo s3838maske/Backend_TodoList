@@ -6,6 +6,14 @@ const userRouter = require("./routes/userRoute");
 const app = express();
 app.use(express.json()); //Middelware
 
+const cors = require('cors');
+
+app.use(cors()); // Allows requests from any origin
+
+// Or specify allowed origins
+app.use(cors({ origin: 'http://localhost:5173' })); // Replace with your frontend URL
+
+
 const port = 5000;
 
 // connection of database
